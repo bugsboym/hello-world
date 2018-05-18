@@ -4,7 +4,7 @@ import subprocess
 import sys
 from datetime import datetime
 
-# Clear the screen
+# Clear the 
 subprocess.call('clear', shell=True)
 
 # Ask for input
@@ -51,3 +51,5 @@ total =  t2 - t1
 
 # Printing the information to screen
 print 'Scanning Completed in: ', total
+
+# test commit changes
