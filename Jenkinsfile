@@ -13,6 +13,7 @@ pipeline {
         stage('post') {
           steps {
             sh 'who'
+            robot 'test'
           }
         }
 
