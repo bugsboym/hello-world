@@ -36,7 +36,7 @@ pipeline {
 
         stage('error') {
           steps {
-            withSonarQubeEnv 'SonarQube_scanner'
+            withSonarQubeEnv 'sonar_local'
           }
         }
 
