@@ -34,9 +34,9 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
-            withSonarQubeEnv(installationName: 'wew', credentialsId: 'ewwe')
+            withSonarQubeEnv 'SonarQube_scanner'
           }
         }
 
