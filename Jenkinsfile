@@ -27,8 +27,19 @@ pipeline {
     }
 
     stage('reports') {
-      steps {
-        robot(outputPath: '/test/', logFileName: 'test.xml', outputFileName: 'test.xml', passThreshold: 1, reportFileName: 'test.xml', unstableThreshold: 1)
+      parallel {
+        stage('reports') {
+          steps {
+            robot(outputPath: '/test/', logFileName: 'test.xml', outputFileName: 'test.xml', passThreshold: 1, reportFileName: 'test.xml', unstableThreshold: 1)
+          }
+        }
+
+        stage('') {
+          steps {
+            withSonarQubeEnv(installationName: 'wew', credentialsId: 'ewwe')
+          }
+        }
+
       }
     }
 
